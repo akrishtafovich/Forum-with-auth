@@ -80,11 +80,14 @@ div.new_post_button{
 	}
 }
 
-div.new_post_form{
+div.post_form{
   background: white;
   padding: 2em 5%;
   border-radius: .5em;
   padding-bottom: 4em;
+}
+#user_email {
+    margin-left: 1em;
 }
 .btn.btn-primary.sign_up {
     float: right;

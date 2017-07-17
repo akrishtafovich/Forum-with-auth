@@ -26,6 +26,6 @@
 <h2> Comments </h2>
 <%= render @post.comments %>
 <p style="text-align: center ;
-font-size: 12px;">To write comments login</p>
+font-size: 12px;">To write comments <%= link_to "login", new_user_session_path%></p>
 </div>
 <%end%>

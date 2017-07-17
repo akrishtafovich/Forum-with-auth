@@ -1,7 +1,9 @@
+<div class="post_form">
 <h1>Edit form</h1>
 <%= simple_form_for [@post, @comment] do |f| %>
 
-    <%= f.input :comment %>
+    <%= f.input :comment, input_html: { class: 'form-control' } %>
     <%= f.submit %>
 <% end %>
 <%= link_to "Cancel", post_path %>
+</div>
