@@ -1,0 +1,7 @@
+<h1>Edit form</h1>
+<%= simple_form_for [@post, @comment] do |f| %>
+
+    <%= f.input :comment %>
+    <%= f.submit %>
+<% end %>
+<%= link_to "Cancel", post_path %>

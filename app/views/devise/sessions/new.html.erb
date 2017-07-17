@@ -1,0 +1,20 @@
+<div class="wrapper-sr new_post_form">
+<div class="auth_settings">
+		<h2>Sign in</h2>
+
+		<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+		  <div class="form-inputs">
+		    <p><%=f.label :email%></p>
+		    <%= f.input :email, required: false, autofocus: true, label: false %>
+		    <p><%=f.label :password%></p>
+		    <%= f.input :password, required: false, label: false%>
+		  </div>
+		<%= render "devise/shared/links" %>
+		  <div class="form-actions">
+		    <%= f.button :submit, "Sign in", class: 'btn btn-primary sign_up'%>
+		  </div>
+		<% end %>
+
+
+</div>
+</div>

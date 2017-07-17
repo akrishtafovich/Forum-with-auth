@@ -1,0 +1,21 @@
+
+#comments > div.comment{
+	margin: 1em 0;
+    padding: 1em 0;
+    border-bottom: 1px solid #D1d1d1;
+}
+
+div.comment_settings{
+	float: right;
+	padding-top: 1.9em;
+	a{
+		border: .1em solid #397CAC;
+		text-decoration: none;
+		padding: .2em .6em;
+		color: #397CAC;
+	}
+	a:hover{
+		background: #397CAC;
+		color: white;
+	}
+}

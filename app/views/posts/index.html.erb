@@ -1,0 +1,13 @@
+
+<div class="forum_news">
+<div id="posts">
+	<% @posts.each do |post| %>		 
+		<div class="post">
+		<%= link_to post.title, post, class: 'title'%> 
+		<p class="date">Published by <%= post.user.email %>
+		<%= time_ago_in_words(post.updated_at) + " ago"%></p>
+		</div>
+
+	<%end%>
+</div>
+</div>

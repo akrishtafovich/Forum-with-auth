@@ -1,0 +1,11 @@
+
+<div class="comment_settings">
+		<%if current_user.id == comment.user_id %>
+			<%= link_to "Edit comment", edit_post_comment_path(@post, comment) %>
+			<%= link_to "Delete comment", [comment.post, comment], method: :delete,  data: { confirm: 'Are you sure?'}%>
+		<%end%>
+	</div>
+<div class="comment">
+	<p>On <%= comment.created_at.strftime("%Y-%m-%d")%> <%=comment.user.email%> wrote:</p>
+	<p><%= comment.comment%></p>
+</div>
