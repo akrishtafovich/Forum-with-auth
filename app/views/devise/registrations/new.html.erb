@@ -1,25 +1,20 @@
 <div class="wrapper-sr post_form">
-	<div class="auth_settings">
-		<h2>Sign up</h2>
-
-		<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-		  <%= f.error_notification %>
-			
-		  <div class="form-inputs">
-			  	<p><%=f.label :email%></p>
-			    <%= f.input :email, required: true, autofocus: true,label: false%>
-			    <p><%=f.label :password%></p>
-			    <%= f.input :password, required: true, label: false%>
-			    <!-- hint: (" #{@minimum_password_length} characters minimum" if @minimum_password_length), -->
-			    <p><%=f.label :password_confirmation%></p>
-			    <%= f.input :password_confirmation,label: false, required: true %>
-		  </div>
-
-		  <div class="form-actions">
-		    <%= f.button :submit, "Sign up", class: 'btn btn-primary sign_in'%>
-		  </div>
-		<% end %>
-
-		<%= render "devise/shared/links" %>
-	</div>
+   <div class="auth_settings">
+      <h2>Sign up</h2>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-inputs">
+         <p><%=f.label :email%></p>
+         <%= f.input :email, required: true, autofocus: true,label: false%>
+         <p><%=f.label :password%></p>
+         <%= f.input :password, required: true, label: false%>
+         <p><%=f.label :password_confirmation%></p>
+         <%= f.input :password_confirmation,label: false, required: true %>
+      </div>
+      <div class="form-actions">
+         <%= f.button :submit, "Sign up", class: 'btn btn-primary sign_in'%>
+      </div>
+      <% end %>
+      <%= render "devise/shared/links" %>
+   </div>
 </div>

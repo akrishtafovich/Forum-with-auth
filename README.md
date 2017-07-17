@@ -1,4 +1,4 @@
- # Simple Forum on ROR 
+ # Forum with auth 
 
 
 * Ruby version

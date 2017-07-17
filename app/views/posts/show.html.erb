@@ -1,31 +1,27 @@
 <div id="post_content">
-<div class="post_settings">
-<%if user_signed_in?%>
-  <%if current_user.id == @post.user_id   %>
-	<%= link_to "Edit", edit_post_path(@post) %> 
-	<%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
-  <%end%>
- <%end%>
-    <%= link_to "Home Page", root_path %>
-</div>
-
-<h1><%=@post.title%></h1>
-<p><%=@post.content%></p>
-
-<div id="comments">
-<%if user_signed_in?%>
-	<h2> Comments </h2>
-		<%= render @post.comments %>
-
-  	<h3>Reply to thread</h3>
-  		<%= render 'comments/form' %>
-  		</div>
-
+   <div class="post_settings">
+      <%if user_signed_in?%>
+      <%if current_user.id == @post.user_id   %>
+      <%= link_to "Edit", edit_post_path(@post) %> 
+      <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%end%>
+      <%end%>
+      <%= link_to "Home Page", root_path %>
+   </div>
+   <h1><%=@post.title%></h1>
+   <p><%=@post.content%></p>
+   <div id="comments">
+      <%if user_signed_in?%>
+      <h2> Comments </h2>
+      <%= render @post.comments %>
+      <h3>Reply to thread</h3>
+      <%= render 'comments/form' %>
+   </div>
 </div>
 <%else%>
 <h2> Comments </h2>
 <%= render @post.comments %>
 <p style="text-align: center ;
-font-size: 12px;">To write comments <%= link_to "login", new_user_session_path%></p>
+   font-size: 12px;">To write comments <%= link_to "login", new_user_session_path%></p>
 </div>
 <%end%>

@@ -1,21 +1,15 @@
 <div class="wrapper post_form">
-
-<h2>Forgot your password?</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true ,input_html: { class: 'reset-email' }%>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" ,class: 'btn btn-primary' %>
-  </div>
-  <div class="form-actions">
-    <%= link_to  "Sign in", new_user_session_path,class: 'btn btn-primary' %>
-  </div>
-<% end %>
-
-
+   <h2>Forgot your password?</h2>
+   <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+   <%= f.error_notification %>
+   <div class="form-inputs">
+      <%= f.input :email, required: true, autofocus: true ,input_html: { class: 'reset-email' }%>
+   </div>
+   <div class="form-actions">
+      <%= f.button :submit, "Send me reset password instructions" ,class: 'btn btn-primary' %>
+   </div>
+   <div class="form-actions">
+      <%= link_to  "Sign in", new_user_session_path,class: 'btn btn-primary' %>
+   </div>
+   <% end %>
 </div>
